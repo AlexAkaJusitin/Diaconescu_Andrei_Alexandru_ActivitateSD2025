@@ -123,6 +123,9 @@ void dezalocareVectorMasini(Masina** vector, int* nrMasini) {
 		free((*vector)[i].numeSofer);
 	}
 
+	free(*vector);
+	*vector = NULL;
+	*nrMasini = 0;
 }
 
 int main() {
