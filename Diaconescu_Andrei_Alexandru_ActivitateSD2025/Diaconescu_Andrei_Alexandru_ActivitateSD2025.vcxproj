@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Seminar3.c" />
+    <Text Include="Masini.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Masini.txt" />
+    <ClCompile Include="Seminar4.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

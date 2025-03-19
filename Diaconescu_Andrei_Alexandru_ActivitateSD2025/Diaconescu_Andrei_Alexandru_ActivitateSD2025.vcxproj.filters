@@ -15,11 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Seminar3.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Text Include="Masini.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Masini.txt" />
+    <ClCompile Include="Seminar4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

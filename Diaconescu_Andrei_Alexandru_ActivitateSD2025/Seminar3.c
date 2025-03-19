@@ -152,6 +152,7 @@ int main() {
 	afisareVectorMasini(masiniCitite, nrMasiniCitite);
 
 	dezalocareVectorMasini(&masiniCitite, &nrMasiniCitite);
+	printf("--------------------\n");
 
 	afisareVectorMasini(masiniCitite, nrMasiniCitite);
 	return 0;
