@@ -156,6 +156,7 @@ void stergeMasinaDupaID(/*lista masini*/ int id) {
 char* getNumeSoferMasinaScumpa(LD list) {
 	//cauta masina cea mai scumpa si 
 	//returneaza numele soferului acestei maasini.
+	if (list.prim == NULL) return NULL;
 
 	Nod* max = list.prim;
 	list.prim = list.prim->next;
@@ -178,8 +179,9 @@ char* getNumeSoferMasinaScumpa(LD list) {
 int main() {
 	LD L = citireLDMasiniDinFisier("masini.txt");
 	afisareListaMasiniDeLaInceput(L);
-	dezalocareLDMasini(&L);
 
 	printf("%f", calculeazaPretMediu(L));
+	printf("%s", getNumeSoferMasinaScumpa(L));
+
 	return 0;
 }
