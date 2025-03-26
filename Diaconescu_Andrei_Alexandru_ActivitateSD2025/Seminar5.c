@@ -68,7 +68,6 @@ void afisareListaMasiniDeLaInceput(LD list) {
 	//afiseaza toate elemente de tip masina din lista dublu inlantuita
 	//prin apelarea functiei afisareMasina()
 	Nod* aux = list.prim;
-
 	while (aux)
 	{
 		afisareMasina(aux->info);
@@ -137,15 +136,14 @@ float calculeazaPretMediu(LD list) {
 	float sum = 0;
 	int contor = 0;
 
-	Nod* aux = list.prim;
-
-	while (aux)
+	Nod* temp = list.prim;
+	while (temp)
 	{
-		sum += aux->info.pret;
+		sum += temp->info.pret;
 		contor++;
-		aux = aux->next;
+		temp = temp->next;
 	}
-
+	
 	if (contor == 0)return 0;
 	return (float)sum / contor;
 }
@@ -155,10 +153,26 @@ void stergeMasinaDupaID(/*lista masini*/ int id) {
 	//tratati situatia ca masina se afla si pe prima pozitie, si pe ultima pozitie
 }
 
-char* getNumeSoferMasinaScumpa(/*lista dublu inlantuita*/) {
+char* getNumeSoferMasinaScumpa(LD list) {
 	//cauta masina cea mai scumpa si 
 	//returneaza numele soferului acestei maasini.
-	return NULL;
+
+	Nod* max = list.prim;
+	list.prim = list.prim->next;
+	
+	while (list.prim)
+	{
+		if (list.prim->info.pret > max->info.pret)
+		{
+			max = list.prim;
+		}
+		list.prim = list.prim->next;
+	}
+
+	char* nume = (char*)malloc(strlen(max->info.numeSofer) + 1);
+	strcpy_s(nume, strlen(max->info.numeSofer) + 1, max->info.numeSofer);
+
+	return nume;
 }
 
 int main() {
