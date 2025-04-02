@@ -183,5 +183,7 @@ int main() {
 	printf("%f", calculeazaPretMediu(L));
 	printf("%s", getNumeSoferMasinaScumpa(L));
 
+	dezalocareLDMasini(&L); 
+
 	return 0;
 }
