@@ -16,9 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Masini.txt" />
+    <Text Include="masini_arbore.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Seminar6.c">
+    <ClCompile Include="Seminar7.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
